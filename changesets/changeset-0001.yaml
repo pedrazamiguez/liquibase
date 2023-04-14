@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Andrés Pedraza
+      labels: JIRA-1882
+      context: qa
+      comment: Create table users
+      changes:
+        - tagDatabase:
+            tag: 1
+        - sqlFile:
+            path: forward/forward-0001.sql
+      rollback:
+        - sqlFile:
+            path: rollback/rollback-0001.sql
